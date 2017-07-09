@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "description": "img9",
   "main": "main.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start-dev-server": "webpack-dev-server --hot --inline --progress",
+    "start-electron": "START_URL=http://localhost:3355 electron ./dist/index.js"
+  },
   "repository": "git@github.com:achiku/img9.git",
   "author": "Akira Chiku <akira.chiku@gmail.com>",
   "license": "MIT",
@@ -11,11 +16,18 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "devtron": "^1.4.0",
     "electron": "^1.6.11",
     "electron-builder": "^19.13.0",
     "eslint": "^4.2.0",
     "eslint-config-kanmu": "^12.0.0",
     "eslint-plugin-sorting": "^0.3.0",
-    "flow-bin": "^0.49.1"
+    "flow-bin": "^0.49.1",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
